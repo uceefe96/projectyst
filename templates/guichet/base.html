@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% comment %} <title>Mon formulaire</title> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'accueil' %}">Accueil</a></li>
+                <li><a href="{% url 'selectionner_etudiant' %}">Sélectionner un étudiant</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+</body>
+</html>

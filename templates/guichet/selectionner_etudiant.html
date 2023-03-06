@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Sélectionner un étudiant{% endblock %}
+
+{% block content %}
+<h1>Sélectionner un étudiant</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="cne">CNE :</label>
+    <input type="text">
+{% endblock content %}

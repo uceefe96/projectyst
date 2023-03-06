@@ -1,0 +1,12 @@
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="cne">CNE</label>
+        <input type="text" class="form-control" id="cne" name="cne" placeholder="Entrez votre CNE">
+    </div>
+    <div class="form-group">
+        <label for="cin">CIN</label>
+        <input type="password" class="form-control" id="cin" name="cin" placeholder="Entrez votre CIN">
+    </div>
+    <button type="submit" class="btn btn-primary">Se connecter</button>
+</form>

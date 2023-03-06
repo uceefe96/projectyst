@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Attestation d'inscription{% endblock %}
+
+{% block content %}
+<h1>Attestation d'inscription</h1>
+<p>Nom : {{ etudiant.nom }}</p>
+<p>Prénom : {{ etudiant.prenom }}</p>
+<p>CNE : {{ etudiant.cne }}</p>
+<p>Date d'inscription : {{ etudiant.date_inscription }}</p>
+<p>Modules validés :</p>
+<ul>
+    {% for module in etudiant.modules.all %}
+    <li>{{ module.nom }} ({{ module.semestre }}) : {{ module.note }}</li>
+    {% endfor %}
+</
